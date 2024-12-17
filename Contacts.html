@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Final-Project/css/Contacts.css">
+    <title>Milkpot</title>
+</head>
+<body>
+    <!-- NavBar Start -->
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo"><a href=""><img src="../Final-Project/image/MilkPot Logo.jpg" alt=""></a><h2 class="logo-name">Milk Pot</h2></div>
+                <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="Contacts.html">Contacts</a></li>
+                </ul>
+                <a href="Login.html" class="action_btn">Log in</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+    
+            <div class="dropdown_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="Contacts.html">Contacts</a></li>
+                        <li><a href="Login.html" class="action_btn">Log in</a></li>
+            </div>
+        </nav>
+         <!-- NavBar End -->
+
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </header>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: milkpotph@gmail.com</p>
+                <p>Phone: 0945 209 6437</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <a class="Location" href="https://www.google.com/maps/place/Milk+Pot/@18.1980049,120.5908557,17z/data=!3m1!4b1!4m6!3m5!1s0x338ec6205727c2b5:0x55abd8230a2a13ac!8m2!3d18.1979998!4d120.5934306!16s%2Fg%2F11fy4fw6pk?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D"><p>MAIN - Gov. Julio Agcaoili, Laoag City, 2900 Ilocos Norte</p></a>
+                <a class="Location" href="https://www.google.com/maps/place/Milk+Pot+II/@18.2026433,120.5902153,17z/data=!4m6!3m5!1s0x338ec7af53819a35:0x19af5c6a3c6a4eb0!8m2!3d18.2026382!4d120.5927902!16s%2Fg%2F11vdz78n0s?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D"><p>SHAMROCK - Brgy. 6, DM, Don Mauricio Castro, Laoag City, 2900 Ilocos Norte</p></a>
+                <a class="Location" href="https://www.google.com/maps/place/Milk+Pot+Batac/@18.0555105,120.5551015,17z/data=!3m1!4b1!4m6!3m5!1s0x338ec114d1bed277:0xce8f42e906af34c9!8m2!3d18.0555054!4d120.5576764!16s%2Fg%2F11w1bzf3xx?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D"><p>BATAC - Barangay, Marcos Ave, Batac, 2906 Ilocos Norte</p></a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://web.facebook.com/milkpotph" class="social-link">Facebook</a> | 
+                    <a href="https://www.instagram.com/milkpotph/" class="social-link">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Milk Pot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sanas', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+    background-image:linear-gradient(rgba(50, 50, 50, 0.377),rgba(50, 50, 50, 0.406)), url('../image/backg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+a:hover {
+    color: black;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    padding: 0 1.5rem;
+    
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.logo-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;    
+    padding: 10px;
+}
+
+.navbar {
+    padding-top: 1%;
+    width: 100%;
+    height: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px; 
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.logo { 
+    display: flex;
+    align-items: center;
+}
+.navbar .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color:  white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 330px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Log In */
+
+.login {
+    border: 1px solid black;
+    width: 400px;
+    height: 500px;      
+    background: url(../image/MilkPot\ Logo.jpg);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 75);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(40%);
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 5);
+    margin-bottom: 60px;
+}
+
+label {
+    color: rgba(255, 255,255, 0.8);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+
+input{
+    background: rgba(255, 255,255, 0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.submit {
+    background: rgba(255, 255,255, 0.8);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    border: none;
+    margin: 10px 0px;
+    box-shadow:0px 0px 2px rgba(0, 0, 0, 3);
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
